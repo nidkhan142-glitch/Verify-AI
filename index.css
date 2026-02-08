@@ -1,0 +1,88 @@
+/* Verify AI - Global Stylesheet */
+
+@layer base {
+  body {
+    background-color: #020617;
+    color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Typography Tokens */
+.mono { 
+  font-family: 'JetBrains Mono', monospace; 
+}
+
+/* Forensic Animation Suite */
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+  to { opacity: 1; } 
+}
+
+@keyframes slideInBottom { 
+  from { transform: translateY(2rem); opacity: 0; } 
+  to { transform: translateY(0); opacity: 1; } 
+}
+
+@keyframes floating { 
+  0% { transform: translateY(0px); } 
+  50% { transform: translateY(-15px); } 
+  100% { transform: translateY(0px); } 
+}
+
+@keyframes pulseGlow { 
+  0% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.2); } 
+  50% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); } 
+  100% { box-shadow: 0 0 5px rgba(16, 185, 129, 0.2); } 
+}
+
+/* Animation Utilities */
+.animate-in { 
+  animation-fill-mode: both; 
+}
+
+.fade-in { 
+  animation-name: fadeIn; 
+}
+
+.slide-in-from-bottom-12 { 
+  animation-name: slideInBottom; 
+}
+
+.animate-floating { 
+  animation: floating 4s ease-in-out infinite; 
+}
+
+/* Thematic Scrollbar */
+::-webkit-scrollbar { 
+  width: 6px; 
+}
+
+::-webkit-scrollbar-track { 
+  background: #020617; 
+}
+
+::-webkit-scrollbar-thumb { 
+  background: #1e293b; 
+  border-radius: 10px; 
+  border: 1px solid #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Custom UI Components used in forensic audits */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-emerald {
+  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.3));
+}
