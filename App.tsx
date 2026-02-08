@@ -14,3 +14,4 @@ import { supabase } from './supabase';
 
 // IMPORTANT: Import your CSS so the site isn't just white text
 import './index.css';
+export default App;
